@@ -32,7 +32,7 @@ function extractFeatures(url) {
   const hasIp = /\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/.test(url) ? 1 : 0;
   const isHttps = url.startsWith('https') ? 1 : 0;
   
-  const badWords = ['login', 'verify', 'update', 'secure', 'account', 'auth', 'billing', 'refund'];
+  const badWords = const badWords = ['login', 'verify', 'update', 'secure', 'account', 'auth', 'billing', 'refund', 'download', 'free', 'torrent', 'stream', 'movie', 'watch', 'apk', 'crack'];
   const hasBadWord = badWords.some(word => lowerUrl.includes(word)) ? 1 : 0;
 
   return [length, numDots, numHyphens, numSlashes, hasIp, isHttps, hasBadWord];
