@@ -60,8 +60,7 @@ app.post('/analyze', (req, res) => {
 
 // USE DYNAMIC PORT FOR RENDER
 const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, "0.0.0.0", () => {
-  console.log("\n🛡️ NoPhish Backend is LIVE");
-  console.log("🚀 Running Pre-Trained Random Forest Model");
-  console.log(`📍 Listening on port ${PORT}\n`);
+    console.log(`📍 Listening on port ${PORT}`);
 });
